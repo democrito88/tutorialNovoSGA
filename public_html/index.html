@@ -13,23 +13,55 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
+            /*
+            amarelo:#ccc919
+            vermelho: #f44336
+            verde: #4caf50
+            */
             .prompt{
                 background-color: black;
                 color: white;
                 padding: 8px;
+                font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
             }
             header{
                 background-color: #ff6633 !important;
                 color: white !important;
             }
+            ul{
+                list-style-type: none
+            }
+            .w3-border-yellow p, .w3-border-yellow strong{
+                color: #ccc919;
+            }
+            .w3-border-red p, .w3-border-red strong{
+                color: #f44336;
+            }
+            .w3-border-green p, .w3-border-green strong{
+                color: #4caf50;
+            }
+            .autor{
+                border-radius: 5px;
+                background-color: #cdcdff;
+                padding: 10px;
+                height: 96px;
+            }
+            .autor img{
+                border-radius: 50%;
+                margin-right: 15px;
+                float: left;
+            }
             footer {
                 position: relative;
                 left: 0;
                 bottom: 0;
+                height: 50px;
                 width: 100%;
+                margin-top: 10px;
                 background-color: #ff6633;
                 color: white;
                 text-align: center;
+                padding: 10px;
              }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -48,7 +80,7 @@
         <section class="container">
             <h3>Requisitos para instalação</h3>
             <ul>
-                <li>Ubuntu 16.04 ou superior</li>
+                <li>Ubuntu Server 16.04 ou superior - Baixe <a href="https://www.ubuntu.com/download/server" target="_blank">aqui</a></li>
                 <li>Apache 2</li>
                 <li>PHP 7.1</li>
                 <li>Mysql 5.7</li>
@@ -92,8 +124,8 @@
             <code>php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"</code><br><br>
             <div class="w3-panel w3-leftbar w3-border-yellow w3-pale-yellow">
                 <strong>Observação</strong>
-                <p><a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a> - Buscar a versão mais nova </p>
-            </div><br><br>
+                <p>Busque a versão mais nova: <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a> </p>
+            </div><br>
             
             <code>php composer-setup.php</code><br><br>
             <p>Altere o nome de composer.phar para composer</p>
@@ -145,7 +177,7 @@
             <p>Você pode verificar, por exemplo, com o comando:</p>
             <code>sudo nano /etc/apache2/apache.conf</code><br><br>
             <p>Procure algo no documento como:</p>
-            <span style="background-color: black; color: white;">&nbsp;&nbsp;Document Root /var/www/html&nbsp;&nbsp;</span><br>
+            <div class="prompt">&nbsp;&nbsp;Document Root /var/www/html&nbsp;&nbsp;</div><br>
             <p>Mova o SGA para o diretório raiz do Apache ( Documente Root )</p>
             <code>sudo mv ~/novosga /var/www/html</code><br><br>
             <div class="w3-panel w3-leftbar w3-border-yellow w3-pale-yellow">
@@ -250,10 +282,17 @@
                 <li><a href="http://phpbrasil.com/phorum/read.php?1,5969">http://phpbrasil.com/phorum/read.php?1,5969</a></li>
                 <li><a href="https://mariadb.com/kb/en/library/mysql_secure_installation/">https://mariadb.com/kb/en/library/mysql_secure_installation/</a></li>
             </ul>
+            
+            <hr><br>
+            <h3>Sobre o autor</h3>
+            <div class="autor">
+                <img src="img/Ganjaboy.jpeg" height="80" width="80">
+                <p style="margin-top: 10px;"><strong>Ganjaboy</strong> é desenvolverdor web e web designer picas!</p>
+                <p>Formado no Peixinhos Comunity College, atua em projetos web pica das galáxias.</p>
+            </div>
         </section>
         <footer>
             <p>Tutorial de instalação no novo SGA v.2.0.7</p>
-            <p>Autor: Ganjaboy</p>
         </footer>
     </body>
 </html>
